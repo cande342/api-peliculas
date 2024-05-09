@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Aplicación desarrollada en Next.js con la intención de armar una pequeña API.
 
-## Getting Started
+Los datos fueron traídos al front, pero se pueden consultar desde PostMan:
 
-First, run the development server:
+GET "/api/peliculas"
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+POST "/api/peliculas"
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Con el siguiente formato:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+{
+  "id": 4,
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+  "nombre": "SpiderMan",
 
-## Learn More
+  "ranking": 5
+}
+DELETE
 
-To learn more about Next.js, take a look at the following resources:
+Funciona colocando sólo el ID en el cuerpo del mensaje.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+{
+  "id": 4
+}
+RUTAS DINÁMICAS
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+No está implementado en el front pero se puede hacer la consulta en Postman.
 
-## Deploy on Vercel
+GET
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+"/api/peliculas/[id]"
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Por ejemplo: /api/peliculas/2

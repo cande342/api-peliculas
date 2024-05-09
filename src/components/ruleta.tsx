@@ -31,7 +31,7 @@ const Ruleta: React.FC<RuletaProps> = ({ apiData }) => {
       </button>
       {elemento && (
         <div className="bg-primary-200 p-4 rounded-md">
-          <h2 className="text-lg font-bold mb-2">¡Obtener Resultado!</h2>
+          <h2 className="text-lg font-bold mb-2">Película elegida:</h2>
           <p>Nombre: {elemento.nombre}</p>
           <p>Valoración: {elemento.ranking}</p>
         </div>

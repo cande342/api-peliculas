@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 
-// Define el tipo de tus datos aquí
 type DataType = {
   id: number;
   nombre: string;
